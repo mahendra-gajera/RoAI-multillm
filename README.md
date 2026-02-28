@@ -354,9 +354,6 @@ streamlit run app/main.py --server.runOnSave true
 4. Push to branch: `git push origin feature/my-feature`
 5. Submit pull request
 
-## License
-
-[Your License Here]
 
 ## Support
 
