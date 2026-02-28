@@ -27,9 +27,8 @@
 The **Multi-LLM Risk Intelligence Platform** is an enterprise-grade system that intelligently routes requests between **OpenAI GPT-4o** and **Google Gemini** based on task complexity, context size, cost sensitivity, and business criticality.
 
 Built specifically for **FinTech, Digital Lending, Payments, and RegTech** applications that require:
-- ✅ **Cost Optimization** (60% reduction)
 - ✅ **High Accuracy** (ensemble validation)
-- ✅ **Full Compliance** (SOC 2, GDPR, HIPAA ready)
+- ✅ **Full Compliance** (GDPR ready)
 - ✅ **Enterprise Controls** (rate limiting, budgets, auditing)
 
 ### Why This Platform?
