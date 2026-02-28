@@ -35,7 +35,7 @@ Built specifically for **FinTech, Digital Lending, Payments, and RegTech** appli
 
 | Challenge | Solution | Result |
 |-----------|----------|--------|
-| 💰 High LLM Costs | Intelligent routing | 60% cost reduction |
+| 💰 High LLM Costs | Intelligent routing | cost reduction |
 | 🎯 Variable Quality | Ensemble validation | Higher accuracy on critical decisions |
 | 📊 No Visibility | Complete observability | Full transparency & audit trails |
 | 🚫 Cost Overruns | Budget controls | Predictable spending |
