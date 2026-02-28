@@ -128,7 +128,6 @@ With Intelligent Routing:
 - ✅ **Unified Interface**: Same API for all providers
 - ✅ **Automatic Fallbacks**: If OpenAI down → Gemini
 - ✅ **Cost Tracking**: Per-model cost breakdown
-- ✅ **Easy Extension**: Add Claude, Llama, Mistral in minutes
 
 **Performance Comparison**:
 
