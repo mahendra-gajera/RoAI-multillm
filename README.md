@@ -82,7 +82,7 @@ Default / General            → OpenAI GPT-4o-mini   (Optimal balance)
 - 🎯 **Higher Accuracy** through task-appropriate model selection
 - 📊 **Full Transparency** with human-readable routing explanations
 
-**Real-World Example**:
+**Example**:
 ```
 Scenario: $500,000 wire transfer to new international beneficiary
 
