@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  multillm-platform:
+    build: .
+    container_name: roai-multillm
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - GEMINI_API_KEY=${GOOGLE_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini/gemini-2.0-flash-exp}
+      - CONTEXT_LENGTH_THRESHOLD=${CONTEXT_LENGTH_THRESHOLD:-80000}
+      - BUSINESS_IMPACT_THRESHOLD=${BUSINESS_IMPACT_THRESHOLD:-0.8}
+      - ENSEMBLE_DEVIATION_THRESHOLD=${ENSEMBLE_DEVIATION_THRESHOLD:-15}
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Simple Fraud Check",
+    "description": "Transaction of $500 from a suspicious IP address (TOR exit node) to a newly added beneficiary. User has never transacted from this location before. Transaction amount is 3x higher than typical spending pattern.",
+    "requires_strict_json": true,
+    "context_length": 500,
+    "multi_document": false,
+    "business_impact": 0.4,
+    "task_type": "fraud_detection",
+    "expected_model": "openai",
+    "expected_reason": "Structured JSON output required"
+  },
+  {
+    "name": "Multi-Document Investigation",
+    "description": "Analyze 50 transaction records across 3 linked accounts showing circular money flow patterns. Account A transfers to Account B, which transfers to Account C, which then transfers back to Account A with 5% reduction each cycle. Pattern repeated over 2 weeks with increasing amounts. Cross-reference with KYC documents, bank statements, and IP logs to identify syndicated fraud ring.",
+    "requires_strict_json": false,
+    "context_length": 120000,
+    "multi_document": true,
+    "business_impact": 0.7,
+    "task_type": "fraud_detection",
+    "expected_model": "gemini",
+    "expected_reason": "Multi-document analysis"
+  },
+  {
+    "name": "High-Risk Wire Transfer",
+    "description": "$500,000 international wire transfer to a new beneficiary in a high-risk jurisdiction. Sender account opened 3 weeks ago. This is the first large transaction. Beneficiary bank has limited AML controls. Transaction structured just below regulatory reporting threshold.",
+    "requires_strict_json": false,
+    "context_length": 2000,
+    "multi_document": false,
+    "business_impact": 0.95,
+    "task_type": "risk_scoring",
+    "expected_model": "ensemble",
+    "expected_reason": "High business impact"
+  },
+  {
+    "name": "Compliance Document Review",
+    "description": "Review loan application for regulatory compliance. Applicant is a small business seeking $250,000 credit line. Review business registration documents, tax returns for last 3 years, bank statements, personal guarantor information, and UCC filings. Check for BSA/AML compliance, OFAC sanctions, beneficial ownership disclosure (FinCEN), and fair lending requirements.",
+    "requires_strict_json": true,
+    "context_length": 8000,
+    "multi_document": false,
+    "business_impact": 0.6,
+    "task_type": "compliance_check",
+    "expected_model": "openai",
+    "expected_reason": "Structured JSON output required"
+  },
+  {
+    "name": "Long-Context Contract Analysis",
+    "description": "Analyze a 150-page commercial lending agreement with 47 schedules and exhibits. Identify key risk terms: default triggers, cross-default provisions, material adverse change clauses, financial covenants, collateral descriptions, guarantor obligations, prepayment penalties, and jurisdiction clauses. Extract all monetary amounts, dates, and party obligations. Assess overall credit risk and flag any unusual or high-risk terms.",
+    "requires_strict_json": false,
+    "context_length": 95000,
+    "multi_document": false,
+    "business_impact": 0.75,
+    "task_type": "document_analysis",
+    "expected_model": "gemini",
+    "expected_reason": "Large context"
+  },
+  {
+    "name": "Account Takeover Detection",
+    "description": "User logged in from new device (iPhone 15, iOS 18.1) in Miami, FL at 2:30 AM EST. Last login was 8 hours ago from laptop in Seattle, WA. User immediately changed email address, phone number, and added new external bank account. Attempted to transfer $15,000 to the new account. User's typical behavior: logs in during business hours, never changes contact info, average transaction is $200.",
+    "requires_strict_json": true,
+    "context_length": 1200,
+    "multi_document": false,
+    "business_impact": 0.85,
+    "task_type": "fraud_detection",
+    "expected_model": "ensemble",
+    "expected_reason": "High business impact"
+  },
+  {
+    "name": "Cross-Border Payment Risk",
+    "description": "Payment of $8,500 from US customer to merchant in Ukraine for 'consulting services'. Customer has no prior history of international payments. Merchant account created 2 days ago. Payment method is cryptocurrency conversion. Customer is a 72-year-old retiree. Red flags: sudden international payment, high-risk country, vague service description, senior citizen vulnerability indicator.",
+    "requires_strict_json": true,
+    "context_length": 900,
+    "multi_document": false,
+    "business_impact": 0.5,
+    "task_type": "fraud_detection",
+    "expected_model": "openai",
+    "expected_reason": "Structured JSON output required"
+  },
+  {
+    "name": "Synthetic Identity Investigation",
+    "description": "Loan application with SSN that shows: thin credit file (only 6 months history), address on record is a UPS store, phone number is VOIP, email is temporary domain, employment verification shows company that doesn't exist in state business registry. Cross-reference with: OFAC lists, fraud databases, IP address geolocation, device fingerprinting data, similar application patterns in last 30 days.",
+    "requires_strict_json": false,
+    "context_length": 5000,
+    "multi_document": true,
+    "business_impact": 0.65,
+    "task_type": "fraud_detection",
+    "expected_model": "gemini",
+    "expected_reason": "Multi-document analysis"
+  },
+  {
+    "name": "RegTech Compliance Scan",
+    "description": "Quarterly compliance review: Check 500 transactions for Regulation E compliance (electronic fund transfers), Regulation Z compliance (Truth in Lending), UDAAP violations (unfair/deceptive practices), SCRA compliance (military member protections). Flag any transactions with: inadequate disclosure, improper fee charges, missing consent, incorrect interest calculations, or prohibited practices. Generate structured report with violation counts by regulation.",
+    "requires_strict_json": true,
+    "context_length": 45000,
+    "multi_document": false,
+    "business_impact": 0.55,
+    "task_type": "compliance_check",
+    "expected_model": "openai",
+    "expected_reason": "Structured JSON output required"
+  },
+  {
+    "name": "Money Laundering Pattern Detection",
+    "description": "Analyze 6 months of transaction data (10,000+ transactions) across 15 accounts showing potential structuring behavior. Multiple cash deposits just under $10,000 reporting threshold. Deposits made at different branch locations. Funds quickly moved through multiple accounts (layering). Final destination: wire transfers to offshore accounts. Pattern shows characteristics of placement, layering, and integration stages of money laundering. Cross-reference with CTR (Currency Transaction Reports) and SAR (Suspicious Activity Reports) filings.",
+    "requires_strict_json": false,
+    "context_length": 180000,
+    "multi_document": true,
+    "business_impact": 0.92,
+    "task_type": "fraud_detection",
+    "expected_model": "ensemble",
+    "expected_reason": "High business impact and multi-document"
+  }
+]
