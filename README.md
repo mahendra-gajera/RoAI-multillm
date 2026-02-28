@@ -285,7 +285,7 @@ Example - Fraud Detection:
 
 ---
 
-### 🏢 Enterprise Features
+### 🏢  Features
 
 <details open>
 <summary><b>🔄 Intelligent Response Caching</b> - Cut costs 40-60% with smart caching</summary>
