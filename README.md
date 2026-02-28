@@ -129,22 +129,8 @@ With Intelligent Routing:
 - ✅ **Automatic Fallbacks**: If OpenAI down → Gemini
 - ✅ **Cost Tracking**: Per-model cost breakdown
 
-**Performance Comparison**:
 
-```
-Benchmark: 1,000 fraud analysis requests
-
-Model             Avg Latency   Total Cost   Accuracy   Pass Rate
-──────────────────────────────────────────────────────────────────
-GPT-4o-mini       1.2s          $7.50        94%        ✅ Good
-GPT-4o            1.8s          $125.00      97%        ✅ Best (expensive)
-Gemini Flash      0.9s          $3.75        93%        ✅ Good + cheap
-Ensemble          2.4s          $11.25       98%        ✅ Best + affordable
-──────────────────────────────────────────────────────────────────
-Smart Routing     1.3s          $4.80        96%        ✅ Optimal
-```
-
-**Real-World Scenario**:
+**Scenario**:
 ```
 Problem: Analyze 500-page loan application with 50 supporting documents
 
@@ -204,8 +190,7 @@ Agreement (<15 pts)        Disagreement (>15 pts)
 | **Mixed Signals** | 50 | 75 | 25 | Escalate | Conflicting assessments |
 
 **Business Impact**:
-- 🎯 **98% Fraud Detection**: vs. 94% with single model
-- 🛡️ **15% More Catches**: Edge cases where one model fails
+- 🛡️ **More Catches**: Edge cases where one model fails
 - ⚠️ **Reduces False Positives**: Cross-validation filters errors
 - 📊 **Audit Trail**: Shows both models' reasoning for compliance
 
