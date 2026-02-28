@@ -373,7 +373,7 @@ Top Cached Queries:
 ```
 
 **Business Benefits**:
-- 💰 40-60% cost reduction with typical usage patterns
+- 💰 cost reduction with typical usage patterns
 - ⚡ Instant responses (<50ms) for cached queries
 - 📈 Better scalability (handles 3x traffic on same budget)
 - 🌍 Reduced API quota pressure
